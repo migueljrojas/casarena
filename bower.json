@@ -1,0 +1,20 @@
+{
+  "name": "base",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "slick-carousel": "^1.8.1",
+    "font-awesome": "^4.7.0",
+    "material-icons": "^0.1.0"
+  }
+}
