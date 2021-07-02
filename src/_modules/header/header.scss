@@ -2,6 +2,9 @@
 
     $h: &;
 
+    position: relative;
+    background: $corpBlack;
+
     &__hamburguer {
         cursor: pointer;
         width: 25px;

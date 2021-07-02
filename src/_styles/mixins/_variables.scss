@@ -1,6 +1,6 @@
 $white: #fff;
 $black: #000;
-$corpBlack: #3e372c;
+$corpBlack: #141414;
 $darkestGray: #333;
 $darkGray: #787871;
 $midGray: #999;
@@ -8,10 +8,12 @@ $lightGray: #ebebeb;
 $lightestGray: #f4f7f8;
 $blue: #053f7a;
 $blueGray: #bbc9c9;
+$gold: #a37a35;
+$altGray: #5d544c;
 
-$mainColor: $blue;
+$mainColor: $gold;
 $link: $mainColor;
-$linkHover: $mainColor + #333;
+$linkHover: lighten($mainColor, 20%);
 $text: $white;
 $textDark: $black;
 $accent: $mainColor;
@@ -36,3 +38,4 @@ $easing: cubic-bezier(.785, .135, .15, .86);
 $easingLight: ease;
 
 $mainFont: 'Open Sans', sans-serif;
+$titleFont: 'Droid Serif', serif;
