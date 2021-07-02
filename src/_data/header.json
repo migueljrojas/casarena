@@ -1,6 +1,30 @@
 [
-    {
-        "name":"",
-        "url":""
-    }
+  {
+    "text":"Nosotros",
+    "url":"/nosotros"
+  },
+  {
+    "text":"Fincas",
+    "url":"/fincas"
+  },
+  {
+    "text":"Vinos",
+    "url":"/vinos"
+  },
+  {
+    "text":"Enología y Agronomía",
+    "url":"/enologia-agronomia"
+  },
+  {
+    "text":"State Experience",
+    "url":"/state-experience"
+  },
+  {
+    "text":"Casarena en el mundo",
+    "url":"/casarena-mundo"
+  },
+  {
+    "text":"Contacto",
+    "url":"/contacto"
+  }
 ]

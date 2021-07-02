@@ -1,4 +1,20 @@
 extends _layouts/base
 
+include _modules/home-box/homeBox
+
+
 block content
-    main.home
+  main.home
+    section.home__hero
+      +homeBox('http://lorempixel.com/1920/1080/city/1')
+      .home__hero-content
+
+    section
+      +homeBox('http://lorempixel.com/1920/1080/city/2') 
+    section
+      +homeBox('http://lorempixel.com/1920/1080/city/3') 
+    section
+      +homeBox('http://lorempixel.com/1920/1080/city/4') 
+    section
+      +homeBox('http://lorempixel.com/1920/1080/city/5')
+
