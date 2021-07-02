@@ -2,17 +2,38 @@
 
     $h: &;
 
-    position: relative;
+    position: fixed;
     background: $corpBlack;
+    display: grid;
+    gap: 5px;
+    padding: 10px 15px;
+    grid-template-columns: auto 1fr 30px;
+    top: 0;
+    width:100%;
+    left:0;
+    z-index: 10000;
+
+    @include mq(md) {
+      grid-template-columns: 1fr minmax(900px, 1200px) 1fr;
+    }
+
+    &__brand {
+      @include mq(md) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+      }
+    }
 
     &__hamburguer {
         cursor: pointer;
         width: 25px;
         height: 25px;
         margin: auto;
-        position: absolute;
-        right: 32px;
-        top: 30px;
+        grid-column: 3;
+        justify-self: end;
+        align-self: center;
 
         span {
             background-color: $mainColor;
@@ -36,6 +57,75 @@
                 animation-direction:reverse;
             }
         }
+
+        @include mq(md) {
+          display: none;
+        }
+    }
+
+    &__logo {
+      height: 40px;
+      display: block;
+
+      img {
+        height: 100%;
+      }
+    }
+
+    &__nav {
+      position: fixed;
+      top: 60px;
+      bottom: 0;
+      left:0;
+      right: 0;
+      background: $corpBlack;
+      padding: 10px 15px;
+      display: grid;
+      transform: translateX(-100%);
+      @include trans;
+
+      @include mq(md) {
+        position: static;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 15px;
+        right: 15px;
+        height: 3px;
+        background: $mainColor;
+        top: 0;
+        z-index: 10;
+      }
+    }
+
+    &__menu {
+      align-self: center;
+      justify-self: center;
+
+      li{
+        &:not(:last-of-type) {
+          margin-bottom: 15px;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $altGray;
+      }
+    }
+
+    &__language {
+      grid-column: 2;
+      justify-self: end;
+      align-self: center;
+      background: none;
+      border:none;
+      color: $altGray;
+      font-size: 14px;
+      font-weight: 400;
     }
 
     &.-open {
@@ -52,7 +142,7 @@
         }
 
         #{$h}__nav {
-
+          transform: translateX(0);
         }
     }
 }
