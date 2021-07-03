@@ -12,13 +12,40 @@
     transform: translateY(-50%);
   }
 
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left:0;
-    right:0;
-    top: 60%;
-    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  
+  &--grad-bottom {
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left:0;
+      right:0;
+      top: 60%;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    }
+  }
+
+  &--grad-left {
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left:0;
+      right:0;
+      top: 60%;
+      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    }
+  }
+
+  &--full {
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left:0;
+      right:0;
+      top: 0;
+      background: rgba(0,0,0,0.3);
+    }
   }
 }
