@@ -1,5 +1,5 @@
-mixin imageBox(img, fade)
-  .image-box(class=`${fade ? 'image-box--' + fade : ''}`)
+mixin imageBox(img, fade, size)
+  .image-box(class=`${fade ? 'image-box--' + fade : ''} ${size ? 'image-box--' + size : ''}`)
     img.image-box__image(src=img)
     if block
       block

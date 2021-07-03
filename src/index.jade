@@ -6,14 +6,21 @@ include _modules/image-box/imageBox
 block content
   main.home
     section.home__hero
-      +imageBox('http://lorempixel.com/1920/1080/city/1', 'grad-bottom')
-        .home__hero-content
+      +imageBox('/images/home/hero.jpg')
+        .home__hero__content
+          .home__hero__text
+            h1.home__hero__title Custodios del Terroir de Luján de Cuyo
+            p.home__hero__subtitle Somos interpretes de la verdadera identidad y de la diversidad del terruño de Luján de Cuyo. Nuestros viñedos y vinos son el epitome de una expresión.
+          span.arrow--down
+
     section
-      +imageBox('http://lorempixel.com/1920/1080/city/2') 
+      +imageBox('/images/home/vinos.jpg', 'grad-bottom', 'small') 
     section
-      +imageBox('http://lorempixel.com/1920/1080/city/3') 
+      +imageBox('/images/home/fincas.jpg', 'full', 'small') 
     section
-      +imageBox('http://lorempixel.com/1920/1080/city/4') 
+      +imageBox('/images/home/uvas.jpg', null, 'small') 
     section
-      +imageBox('http://lorempixel.com/1920/1080/city/5')
+      +imageBox('/images/home/campo.jpg', 'full', 'small')
+    section
+      +imageBox('/images/home/state.jpg', 'grad-left', 'small')
 
