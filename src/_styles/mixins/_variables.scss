@@ -10,7 +10,7 @@ $blue: #053f7a;
 $blueGray: #bbc9c9;
 $gold: #a37a35;
 $altGray: #5d544c;
-$beige: transparentize($gold, .9);
+$beige: lighten($gold, 50%);
 
 $mainColor: $gold;
 $link: $mainColor;

@@ -39,6 +39,11 @@ ul {
     margin: 0;
 }
 
+p {
+  color: $text;
+  font-size: .8rem;
+}
+
 // Styling on warning for users on IE7 or below
 .browsehappy {
   text-align: center;
@@ -48,21 +53,7 @@ ul {
   padding: 0.5em 0;
 }
 
-h1 {
-  color: $text;
-  font-style: italic;
-  font-weight: 100;
-  font-family: $titleFont;
-  position: relative;
-}
-
 .h1__center {
   text-align: center;
   margin-bottom: 1rem;
-}
-
-p {
-  color: $text;
-  margin: 0;
-  font-size: .8rem;
 }

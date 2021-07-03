@@ -1,17 +1,100 @@
 .nosotros {
     background-color: black;
 
-    &__hero {
+    &__hero-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        justify-items: center;
         position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate3d(-50%, -50%, 0);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        width: 100%;
+        top: 0;
+        bottom: 0;
 
-        &-b {
-            align-items: flex-start;
+        &--container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 25rem;
+            grid-column: 2;
+            grid-row: 2;
+
+            h1 {
+                font-size: 3.5rem;
+                margin: 0 0 .75rem 0;
+                color: $text;
+                font-style: italic;
+                font-weight: 100;
+                font-family: $titleFont;
+                text-align: center;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    &__section {
+        background-color: $beige;
+        height: 10rem;
+
+        &-content {
+            max-width: 1200px;
+            margin: auto;
+            border-top: $gold solid 5px;
+            height: 10rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            justify-items: center;
+
+            &--container {
+                max-width: 25rem;
+                text-align: center;
+                grid-column: 2;
+                grid-row: 2;
+
+                h3 {
+                    color: $gold;
+                    font-size: 1.5rem;
+                    font-style: italic;
+                    font-weight: 100;
+                    font-family: $titleFont;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    &__explore-content {
+        display: grid;
+        grid-template-columns: 1fr 1200px 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        justify-items: flex-start;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+
+        &--container {
+            max-width: 27rem;
+            grid-column: 2;
+            grid-row: 2;
+
+            h1 {
+                font-size: 3.5rem;
+                margin: 0 0 .75rem 0;
+                color: $text;
+                font-weight: 100;
+                font-family: $titleFont;
+            }
+
+            p {
+                font-size: .9rem;
+                line-height: 1.5rem;
+                margin-bottom: 2.3rem;
+            }
         }
     }
 }

@@ -4,18 +4,35 @@ block config
   - var baseUrl = '../';
 
 include ../_modules/image-box/imageBox
+include ../_modules/button/button
 
 block content
-  main.home
-    section.home__hero
+  main.nosotros
+    section.nosotros__hero
       +imageBox('http://lorempixel.com/1920/1080/city/1')
-        .home__hero-content
-    section
-      +imageBox('http://lorempixel.com/1920/1080/city/2') 
-    section
+        .nosotros__hero-content
+          .nosotros__hero-content--container
+            h1 Somos custodios de un legado
+            p Diverso. Histórico. Único.
+            button 
+
+    section.nosotros__section
+        .nosotros__section-content
+          .nosotros__section-content--container
+            h3 Custodios del terroir de Luján de Cuyo, especialistas en Single Vineyards.
+    
+    section.nosotros__explore
       +imageBox('http://lorempixel.com/1920/1080/city/3') 
+        .nosotros__explore-content
+            .nosotros__explore-content--container
+              h1 Bodega Casarena
+              p Es custodio e interprete del Terroir de Luján de Cuyo. Somos especialistas en viñedos de Perdriel y Agrelo, creando vinos que logran expresar la identidad y la diversidad de nuestra tierra.
+              +cButton('#', 'white')
+                | explorar vinos
+    
     section
       +imageBox('http://lorempixel.com/1920/1080/city/4') 
+    
     section
       +imageBox('http://lorempixel.com/1920/1080/city/5')
       
