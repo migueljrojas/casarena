@@ -49,4 +49,240 @@
     }
   }
 
+  &__wines {
+    &__content {
+      position: absolute;
+      top: 0%;
+      bottom: 0;
+      left: 50%;
+      width: 90%;
+      max-width: 1200px;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      padding-bottom: 5%;
+      z-index: 10;
+
+      &:before {
+        content: '';
+        height: 5px;
+        background: $gold;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+
+  &__fincas {
+    &__content {
+      position: absolute;
+      top: 0%;
+      bottom: 0;
+      left: 50%;
+      width: 90%;
+      max-width: 1200px;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      padding-bottom: 5%;
+      padding-right: 5%;
+      z-index: 10;
+    }
+
+    &__text {
+      font-family: $titleFont;
+      font-size: 36px;
+      font-style: italic;
+      font-weight: normal;
+      margin: 0 0 20px;
+      color: $white;
+      text-align: right;
+      max-width: 760px;
+
+      @include mq(md) {
+        font-size: 56px;
+      }
+    }
+  }
+
+  &__uvas {
+    position: relative;
+
+    &:before {
+      content: '';
+      height: 5px;
+      background: $gold;
+      position: absolute;
+      top: 0;
+      width: 90%;
+      max-width: 1200px;
+      left:0;
+      right:0;
+      margin: auto;
+    }
+
+    .image-box__image {
+      left: 0;
+      right:0;
+
+      @include mq(md) {
+        left: auto;
+        width: 75%;
+        height: 108%;
+      }
+    }
+
+    &__content {
+      position: absolute;
+      top: 0%;
+      bottom: 0;
+      left: 50%;
+      width: 90%;
+      max-width: 1200px;
+      transform: translateX(-50%);
+      z-index: 10;
+      display: grid;
+      grid-template-rows: 1fr auto 1r;
+    }
+
+    &__text,
+    &__supertitle,
+    &__subtitle {
+      color: $altGray;
+    }
+
+    &__text {
+      max-width: 450px;
+      grid-row: 2;
+    }
+
+    &__title {
+      color: $mainColor;
+      font-family: $titleFont;
+      font-size: 36px;
+      font-weight: normal;
+      margin: 0 0 25px;
+      max-width: 760px;
+      
+      @include mq(md) {
+        font-size: 56px;
+      }
+    }
+    
+    &__subtitle {
+      margin-bottom: 15%;
+      line-height: 1.7;
+      font-size: 18px;
+    }
+
+    &__supertitle {
+      color: $altGray;
+      letter-spacing: 1.2px;
+      text-decoration: uppercase;
+    }
+  }
+
+  &__campo {
+    position: relative;
+
+    &__content {
+      position: absolute;
+      top: 0%;
+      bottom: 0;
+      left: 50%;
+      width: 90%;
+      max-width: 1200px;
+      transform: translateX(-50%);
+      z-index: 10;
+      display: grid;
+      grid-template-rows: 1fr auto 1r;
+    }
+
+    &__text,
+    &__supertitle,
+    &__subtitle {
+      color: $white;
+      text-align: center;
+    }
+
+    &__text {
+      max-width: 600px;
+      grid-row: 2;
+      justify-self: center;
+    }
+
+    &__title {
+      color: $white;
+      font-family: $titleFont;
+      font-size: 32px;
+      font-weight: normal;
+      margin: 0 0 80px;
+      max-width: 760px;
+      
+      @include mq(md) {
+        font-size: 52px;
+      }
+    }
+    
+    &__subtitle {
+      margin-bottom: 15%;
+      line-height: 1.7;
+      font-size: 18px;
+    }
+
+    &__supertitle {
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__state {
+    &__content {
+      position: absolute;
+      top: 0%;
+      bottom: 0;
+      left: 50%;
+      width: 90%;
+      max-width: 1200px;
+      transform: translateX(-50%);
+      z-index: 10;
+      display: grid;
+      grid-template-rows: 1fr auto 1r;
+    }
+
+    &__text,
+    &__supertitle,
+    &__subtitle {
+      color: $altGray;
+    }
+
+    &__text {
+      max-width: 550px;
+      grid-row: 2;
+    }
+
+    &__title {
+      color: $white;
+      font-family: $titleFont;
+      font-size: 36px;
+      font-weight: normal;
+      margin: 0 0 15%;
+      max-width: 760px;
+      
+      @include mq(md) {
+        font-size: 56px;
+      }
+    }
+    
+    &__supertitle {
+      color: $white;
+      letter-spacing: 1.2px;
+      text-decoration: uppercase;
+      margin-bottom: 30px;
+    }
+  }
 }

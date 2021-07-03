@@ -1,15 +1,24 @@
 .image-box {
   width: 100%;
   position: relative;
-  padding-bottom: 43%;
+  padding-bottom: 150%;
   overflow: hidden;
+
+  @include mq(md) {
+    padding-bottom: 43%;
+  }
   
   &__image {
     position: absolute;
     top:50%;
     left: 0;
-    width:100%;
+    height:100%;
     transform: translateY(-50%);
+
+    @include mq(md) {
+      height: auto;
+      width:100%;
+    }
   }
 
   
@@ -20,8 +29,8 @@
       bottom: 0;
       left:0;
       right:0;
-      top: 60%;
-      background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+      top: 40%;
+      background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
     }
   }
 
@@ -50,6 +59,10 @@
   }
 
   &--small {
-    padding-bottom: 36%;
+    padding-bottom: 120%;
+
+    @include mq(md) {
+      padding-bottom: 39%;
+    }
   }
 }

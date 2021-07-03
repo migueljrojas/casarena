@@ -1,6 +1,7 @@
 extends _layouts/base
 
 include _modules/image-box/imageBox
+include _modules/button/button
 
 
 block content
@@ -13,14 +14,39 @@ block content
             p.home__hero__subtitle Somos interpretes de la verdadera identidad y de la diversidad del terruño de Luján de Cuyo. Nuestros viñedos y vinos son el epitome de una expresión.
           span.arrow--down
 
-    section
-      +imageBox('/images/home/vinos.jpg', 'grad-bottom', 'small') 
-    section
+    section.home__wines
+      +imageBox('/images/home/vinos.jpg', 'grad-bottom', 'small')
+        .home__wines__content 
+          +cButton('/vinos', null, null, 'big')
+            | Ver todos los vinos
+    section.home__fincas
       +imageBox('/images/home/fincas.jpg', 'full', 'small') 
-    section
-      +imageBox('/images/home/uvas.jpg', null, 'small') 
-    section
+        .home__fincas__content 
+          h2.home__fincas__text Dedicados a elaborar vinos de la más alta calidad
+    section.home__uvas 
+      +imageBox('/images/home/uvas.png', null, 'small')
+        .home__uvas__content
+          .home__uvas__text
+            p.home__uvas__supertitle CASARENA
+            h1.home__uvas__title Enología y Agronomía
+            p.home__uvas__subtitle Hacemos vinos que muestran la verdadera identidad de nuestros viñedos y de Luján de Cuyo
+            +cButton('/enologia-agronomia', 'gray')
+              | Conocer más
+    section.home__campo 
       +imageBox('/images/home/campo.jpg', 'full', 'small')
-    section
+        .home__campo__content
+          .home__campo__text
+            p.home__campo__supertitle Nuestras Fincas
+            h1.home__campo__title Interpretamos la diversidad de Terroir de Luján de Cuyo
+            +cButton('/enologia-agronomia', 'white')
+              | Explorar Fincas
+
+    section.home__state
       +imageBox('/images/home/state.jpg', 'grad-left', 'small')
+        .home__state__content
+          .home__state__text
+            p.home__state__supertitle CASA NAOKI
+            h1.home__state__title Estate Experience
+            +cButton('#', null, null, null, true)
+              | Ingresar al Sitio
 

@@ -1,10 +1,10 @@
-mixin cButton(url, color, mode)
+mixin cButton(url, color, mode, size, fill)
 
   if mode == 'button'
     button.c-button
       if block
         block
   else
-    a.c-button(href=url, class=`${color ? 'c-button--' + color : ''}`)
+    a.c-button(href=url, class=`${color ? 'c-button--' + color : ''} ${size ? 'c-button--' + size : ''} ${fill ? 'c-button--filled' : ''}`)
       if block
         block
