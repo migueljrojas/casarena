@@ -1,3 +1,91 @@
 .footer {
+  display: grid;
+  grid-template-columns: 5% 90% 5%;
+
+  @include mq(md) {
+    grid-template-columns: 1fr minmax(900px, 1200px) 1fr;
+  }
+
+  &__top {
+    grid-column: 2;
+    padding-top: 30px;
+    padding-bottom: 30px;
     
+    @include mq(md) {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: center;
+    }
+  }
+
+  &__menu {
+    text-align: center;
+
+    @include mq(md) {
+      display: flex;
+      justify-content: space-between;
+      gap: 50px;
+    }
+
+    li {
+      margin-bottom: 15px;
+
+      @include mq(md) {
+        margin-bottom: 0;
+      }
+    }
+
+  }
+
+  &__link {
+    color: $mainColor;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__nav {
+    margin-bottom: 30px;
+
+    @include mq(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__bottom {
+    grid-column: 2;
+    border-top: 1px solid $lightGray;
+    padding: 20px 0;
+  }
+
+  &__copy {
+    margin: 0;
+    text-align: center;
+    color: $mainColor;
+    font-size: 14px;
+  }
+
+  &__brand {
+    margin-bottom: 30px;
+    text-align: center;
+    height: 60px;
+
+    @include mq(md) {
+      margin-bottom: 0;
+    }
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__social {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  }
 }
