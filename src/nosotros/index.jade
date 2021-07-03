@@ -3,6 +3,52 @@ extends ../_layouts/base
 block config
   - var baseUrl = '../';
 
+include ../_modules/image-box/imageBox
+
 block content
+  main.home
+    section.home__hero
+      +imageBox('http://lorempixel.com/1920/1080/city/1')
+        .home__hero-content
+    section
+      +imageBox('http://lorempixel.com/1920/1080/city/2') 
+    section
+      +imageBox('http://lorempixel.com/1920/1080/city/3') 
+    section
+      +imageBox('http://lorempixel.com/1920/1080/city/4') 
+    section
+      +imageBox('http://lorempixel.com/1920/1080/city/5')
+      
+//- block content
   main.nosotros
-    h1 nosotros
+    section.image-box
+        img.image-box__image(src="http://lorempixel.com/1280/700/city/1", alt="")
+        div.nosotros__hero
+          h1.h1__center Somos custodios<br>de un legado 
+          p Diverso. Histórico. Único.
+          button.nosoxtros__btn-down
+
+    div.nosotros__div
+      p Custodios del terroir de Luján de Cuyo, especialistas en Single Vineyards.
+
+    section.image-box
+      img.image-box__image(src="http://lorempixel.com/1280/70/city/4",   alt="")
+      div
+        h1 bodega casarena
+        p Lorem ipsum dolor sit, amet consectetur adipisicing elit.  Sint doloremque nam ea ex hic ab expedita provident  consequuntur. Autem quasi voluptas praesentium sint omnis modi   veritatis eum voluptatum iste architecto.
+        button.nosotros__btn
+
+    article.nosotros__article
+      p.nosotros__p 
+      img.nosotros__img(src="/", alt="malbec")
+      img.nosotros__img(src="/", alt="mapa")
+      img.nosotros__img(src="/", alt="barriles")
+      p.nosotros__p
+
+
+    section.image-box
+      h4.nosotros__h4
+      h1.nosotros__h1
+      button.nosotros__btn
+
+
