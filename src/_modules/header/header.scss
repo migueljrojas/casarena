@@ -15,6 +15,7 @@
 
     @include mq(md) {
       grid-template-columns: 1fr minmax(900px, 1200px) 1fr;
+      padding: 0;
     }
 
     &__brand {
@@ -23,6 +24,7 @@
         left: 50%;
         top: 50%;
         transform: translate3d(-50%, -50%, 0);
+        z-index: 10;
       }
     }
 
@@ -67,6 +69,10 @@
       height: 40px;
       display: block;
 
+      @include mq(md) {
+        height: 55px;
+      }
+
       img {
         height: 100%;
       }
@@ -86,6 +92,10 @@
 
       @include mq(md) {
         position: static;
+        transform: translateX(0);
+        grid-column: 2;
+        padding: 40px 0;
+        background: none;
       }
 
       &:before {
@@ -97,16 +107,57 @@
         background: $mainColor;
         top: 0;
         z-index: 10;
+
+        @include mq(md) {
+          height: 5px;
+          left: 0;
+          right: 0;
+          margin: auto;
+          width: 100%;
+        }
       }
     }
 
     &__menu {
       align-self: center;
       justify-self: center;
+      
+      @include mq(md) {
+        width: 100%;
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(4, auto) 220px repeat(3, auto);
+      }
 
       li{
+
+        &:nth-child(5) {
+          @include mq(md) {
+            grid-column: 6;
+            justify-self: end;
+          }
+        }
+
+        &:nth-child(6) {
+          @include mq(md) {
+            grid-column: 7;
+            justify-self: end;
+          }
+        }
+
+        &:nth-child(7) {
+          @include mq(md) {
+            grid-column: 8;
+            justify-self: end;
+          }
+        }
+
         &:not(:last-of-type) {
           margin-bottom: 15px;
+
+          @include mq(md) {
+            margin-bottom: 0;
+          }  
         }
       }
 
@@ -114,6 +165,10 @@
         text-decoration: none;
         text-transform: uppercase;
         color: $altGray;
+
+        @include mq(md) {
+          font-size: 14px;
+        } 
       }
     }
 
@@ -126,6 +181,11 @@
       color: $altGray;
       font-size: 14px;
       font-weight: 400;
+
+      @include mq(md) {
+        grid-column: 3;
+        justify-self: center;
+      }  
     }
 
     &.-open {
@@ -144,6 +204,14 @@
         #{$h}__nav {
           transform: translateX(0);
         }
+    }
+
+    & + main {
+      padding-top: 60px;
+
+      @include mq(md) {
+        padding-top: 98px;
+      }
     }
 }
 
