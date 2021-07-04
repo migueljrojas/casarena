@@ -10,11 +10,11 @@ block content
   main.nosotros
     section.nosotros__hero
       +imageBox('http://lorempixel.com/1920/1080/city/1')
-        .nosotros__hero-content
-          .nosotros__hero-content--container
-            h1 Somos custodios de un legado
-            p Diverso. Histórico. Único.
-            button 
+        .nosotros__hero__content
+          .nosotros__hero__text 
+            h1.nosotros__hero__title Somos custodios de un legado
+            p.nosotros__hero__subtitle Diverso. Histórico. Único.
+          span.arrow--down 
 
     section.nosotros__section
         .nosotros__section-content
@@ -23,12 +23,12 @@ block content
     
     section.nosotros__explore
       +imageBox('http://lorempixel.com/1920/1080/city/3') 
-        .nosotros__explore-content
-            .nosotros__explore-content--container
-              h1 Bodega Casarena
-              p Es custodio e interprete del Terroir de Luján de Cuyo. Somos especialistas en viñedos de Perdriel y Agrelo, creando vinos que logran expresar la identidad y la diversidad de nuestra tierra.
-              +cButton('#', 'white')
-                | explorar vinos
+        .nosotros__explore__content
+          .nosotros__explore__text
+            h1.nosotros__explore__title Bodega Casarena
+            p.nosotros__explore__subtitle Es custodio e interprete del Terroir de Luján de Cuyo. Somos especialistas en viñedos de Perdriel y Agrelo, creando vinos que logran expresar la identidad y la diversidad de nuestra tierra.
+            +cButton('#', 'white')
+              | explorar vinos
     
     section.nosotros__grid
       .nosotros__grid-content
@@ -43,10 +43,10 @@ block content
     
     section.nosotros__explore
       +imageBox('http://lorempixel.com/1920/1080/city/3') 
-        .nosotros__explore-content
-            .nosotros__explore-content--container
-              p Casarena tiene cuatro fincas estratégicamente ubicadas.
-              h1 Jamilla, Naoki, Owen y Lauren
+        .nosotros__explore__content
+            .nosotros__explore__text
+              p.nosotros__explore__subtitle.up Casarena tiene cuatro fincas estratégicamente ubicadas.
+              h1.nosotros__explore__title.down Jamilla, Naoki, Owen y Lauren
               +cButton('#', 'white')
                 | explorar fincas
       
