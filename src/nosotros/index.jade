@@ -10,11 +10,11 @@ block content
   main.nosotros
     section.nosotros__hero
       +imageBox('http://lorempixel.com/1920/1080/city/1')
-        .nosotros__hero-content
-          .nosotros__hero-content--container
-            h1 Somos custodios de un legado
-            p Diverso. Histórico. Único.
-            button 
+        .nosotros__hero__content
+          .nosotros__hero__text 
+            h1.nosotros__hero__title Somos custodios de un legado
+            p.nosotros__hero__subtitle Diverso. Histórico. Único.
+          span.arrow--down 
 
     section.nosotros__section
         .nosotros__section-content
@@ -23,18 +23,32 @@ block content
     
     section.nosotros__explore
       +imageBox('http://lorempixel.com/1920/1080/city/3') 
-        .nosotros__explore-content
-            .nosotros__explore-content--container
-              h1 Bodega Casarena
-              p Es custodio e interprete del Terroir de Luján de Cuyo. Somos especialistas en viñedos de Perdriel y Agrelo, creando vinos que logran expresar la identidad y la diversidad de nuestra tierra.
+        .nosotros__explore__content
+          .nosotros__explore__text
+            h1.nosotros__explore__title Bodega Casarena
+            p.nosotros__explore__subtitle Es custodio e interprete del Terroir de Luján de Cuyo. Somos especialistas en viñedos de Perdriel y Agrelo, creando vinos que logran expresar la identidad y la diversidad de nuestra tierra.
+            +cButton('#', 'white')
+              | explorar vinos
+    
+    section.nosotros__grid
+      .nosotros__grid-content
+        .nosotros__grid-content--el1
+          p Este proyecto vitivinícola está ubicado en el corazón de Perdriel, a tan solo 20 minutos de la Ciudad de Mendoza, en el edificio de una bodega centenaria, construida en 1937, que fue totalmente renovada para nuestro trabajo. Dentro de Luján de Cuyo contamos con propiedades en diferentes situaciones geográficas, tanto en altura, como en orientación y en composición de los suelos. Se exploró profundamente cada suelo en los viñedos para poder mostrar todas las expresiones posibles de un mismo varietal en una zona.
+        img(src="http://lorempixel.com/1920/1080/city/9", alt="map").nosotros__grid-content--el2
+        img(src="http://lorempixel.com/1920/1080/city/8", alt="viñedo").nosotros__grid-content--el3
+        img(src="http://lorempixel.com/1920/1080/city/4", alt="barriles").nosotros__grid-content--el4
+        .nosotros__grid-content--el5
+          p Representa el poder de una zona que se expresa desde el viñedo mediante el trabajo de grandes profesionales que las interpretan. Todas las dimensiones de Luján de Cuyo, la zona perfecta para crear vinos con el sello único.
+
+    
+    section.nosotros__explore
+      +imageBox('http://lorempixel.com/1920/1080/city/3') 
+        .nosotros__explore__content
+            .nosotros__explore__text
+              p.nosotros__explore__subtitle.up Casarena tiene cuatro fincas estratégicamente ubicadas.
+              h1.nosotros__explore__title.down Jamilla, Naoki, Owen y Lauren
               +cButton('#', 'white')
-                | explorar vinos
-    
-    section
-      +imageBox('http://lorempixel.com/1920/1080/city/4') 
-    
-    section
-      +imageBox('http://lorempixel.com/1920/1080/city/5')
+                | explorar fincas
       
 //- block content
   main.nosotros
