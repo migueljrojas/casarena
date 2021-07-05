@@ -10,6 +10,8 @@
       display: grid;
       grid-template-columns: 1fr minmax(280px, 680px) 1fr;
       grid-template-rows: 1fr auto 1fr;
+      padding-right: 15px;
+      padding-left: 15px;
     }
   
     &__text {
@@ -21,7 +23,7 @@
   
     &__title {
       font-family: $titleFont;
-      font-size: 48px;
+      font-size: 42px;
       font-style: italic;
       font-weight: normal;
       margin: 0 0 20px;

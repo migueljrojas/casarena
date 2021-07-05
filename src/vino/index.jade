@@ -1,0 +1,42 @@
+extends ../_layouts/base
+
+block config
+  - var baseUrl = '../';
+
+block content
+  main.vino
+    section.vino__chart
+      .vino__chart__heading 
+        .vino__container.vino__container--grid
+          ul.vino__tabs
+            li.vino__tab Icono 
+            li.vino__tab Malbec 
+            li.vino__tab Cabernet Sauvignon
+
+
+
+    section.vino__otros 
+      .vino__container
+        h2.vino__otros__title Otros Vinos
+        ul.vino__otros__list
+          li.vino__otros__item 
+            a(href="#")
+              img.vino__otros__img(src="/images/vino/otros-1.png")
+              h3.vino__otros__name 505
+          li.vino__otros__item  
+            a(href="#")
+              img.vino__otros__img(src="/images/vino/otros-2.png")
+              h3.vino__otros__name Estate
+          li.vino__otros__item  
+            a(href="#")
+              img.vino__otros__img(src="/images/vino/otros-3.png")
+              h3.vino__otros__name Reservado
+          li.vino__otros__item  
+            a(href="#")
+              img.vino__otros__img(src="/images/vino/otros-4.png")
+              h3.vino__otros__name Sinergy Vineyard
+          li.vino__otros__item  
+            a(href="#")
+              img.vino__otros__img(src="/images/vino/otros-5.png")
+              h3.vino__otros__name Single Vineyard
+
