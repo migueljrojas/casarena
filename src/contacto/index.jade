@@ -5,4 +5,53 @@ block config
 
 block content
   main.contacto
-    h1 contacto
+    section.contacto__hero
+      .contacto__hero__container 
+        .contacto__hero__top
+          h1.contacto__title Contacto
+          ul.contacto__social
+            li
+              span Seguinos
+            li
+              a(href="#")
+                i.fa.fa-facebook
+            li
+              a(href="#")
+                i.fa.fa-twitter
+            li
+              a(href="#")
+                i.fa.fa-instagram
+
+        .contacto__hero__mid
+          .contacto__info 
+            h2.contacto__info__name Oficinas Centrales
+            p.contacto__info__text
+              | Brandsen 505, Perdriel
+              br
+              | Luján de Cuyo, Mendoza
+          .contacto__info
+            h2.contacto__info__name Contacto Comercial
+            p.contacto__info__text
+              a(href="mailto:ventas@casarena.com", target="_blank") ventas@casarena.com
+          .contacto__info 
+            h2.contacto__info__name Estate Experience
+            p.contacto__info__text
+              a(href="mailto:hospitalidad@casanaoki.com", target="_blank") hospitalidad@casanaoki.com
+              br
+              a(href="tel:+5492616919840", target="_blank") +(54) 9 2616 91 9840
+
+        .contacto__hero__bottom
+          .contacto__newsletter 
+            .contacto__newsletter__heading
+              span.contacto__newsletter__supertitle Newsletter
+              h3.contacto__newsletter__title Entérate de las últimas novedades
+            form.contacto__newsletter__form
+              input.contacto__newsletter__input(type="email", placeholder="Ingresa tu e-mail")
+              button.contacto__newsletter__submit(type='submit')
+                span enviar 
+                i.arrow--right
+
+
+    section.contacto__map
+      | <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13374.457760324796!2d-68.89583997888184!3d-33.06661611244684!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf3b367df1c190b90!2sCasarena%20Bodega%20y%20Vi%C3%B1edos!5e0!3m2!1ses-419!2sar!4v1625455067739!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy"></iframe>
+      span

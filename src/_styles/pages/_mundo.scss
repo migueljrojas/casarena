@@ -1,0 +1,179 @@
+.casarena-mundo {
+  background: $beige;
+
+  &__hero {
+    padding: 12% 0;
+
+    @include mq(md) {
+      padding: 6% 0;
+    }
+  }
+
+  &__title {
+    font-family: $titleFont;
+    font-size: 36px;
+    font-style: italic;
+    font-weight: normal;
+    margin: -30px 0 50px;
+    background: $beige;
+    color: $mainColor;
+    text-align: center;
+    display: inline-block;
+    padding: 0 15px; 
+
+    @include mq(md) {
+      font-size: 56px;
+      padding: 0 50px;
+    }
+  }
+
+  &__container {
+    text-align: center;
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    border: 1px solid $mainColor;
+  }
+
+  &__map {
+    position: relative;
+    z-index: 10;
+    
+    @include mq(md) {
+      margin-bottom: -65px;
+    }
+
+    img {
+      display: none;
+      position: relative;
+      z-index: 10;
+
+      @include mq(md) {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__map-markers {
+    top: 0;
+    left:0;
+    right:0;
+    bottom: 0;
+
+    @include mq(md) {
+      position: absolute;
+    }
+  }
+
+  &__map-marker {
+    $marker: &;
+
+    z-index: 20;
+
+    @include mq(md) {
+      position: absolute;
+    }
+
+    &:hover {
+      z-index: 1000;
+
+      & > #{$marker}__info {
+        display: block;
+      }
+    }
+
+    &__dot {
+      background: $mainColor;
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+      display: none;
+      position: relative;
+      z-index: 0;
+
+      @include mq(md) {
+        display: block;
+      }
+    }
+
+    &__info {
+      background: $white;
+      border-radius: 10px;
+      padding: 15px;
+      z-index: 1000;
+      left: 30px;
+      top: -30px;
+      text-align: left;
+      display: block;
+      margin-bottom: 20px;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      
+      @include mq(md) {
+        box-shadow: 0 0 15px rgba(0,0,0,.2);
+        position: absolute;
+        display: none;
+        padding: 30px;
+        width: auto;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 25px;
+        left:-10px;
+        width: 20px;
+        height: 20px;
+        transform: rotate(-45deg);
+        background: $white;
+        display: none;
+
+        @include mq(md) {
+          display: block;
+        }
+      }
+    }
+
+    &__country {
+      color: $mainColor;
+      font-family: $titleFont;
+      font-weight: normal;
+      font-size: 24px;
+      text-align: left;
+      margin: 0 0 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid $lightGray;
+    }
+
+    &__mail {
+      display: grid;
+      grid-template-columns: 1fr 30px;
+    }
+
+    &__mail-label {
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    &__mail-link {
+      font-weight: 600;
+      color: $altGray;
+      text-decoration: none;
+      padding-right: 30px;
+    }
+
+    &__mail-icon {
+      grid-column: 2;
+      grid-row: 1 / span 2;
+
+      i {
+        width: 100%;
+        font-size: 36px;
+        color: $mainColor;
+        font-weight: 100;
+      }
+    }
+  }
+}
