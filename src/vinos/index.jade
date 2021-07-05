@@ -1,8 +1,26 @@
 extends ../_layouts/base
+include ../_modules/image-box/imageBox
 
 block config
   - var baseUrl = '../';
 
 block content
   main.vinos
-    h1 nuestros vinos
+    section.vinos__hero
+      +imageBox('/images/vinos/hero.jpg', 'full')
+        .vinos__hero__content
+          .vinos__hero__text
+            h1.vinos__hero__title Nuestros Vinos
+            p.vinos__hero__subtitle Somos interpretes del terroir de Luján de Cuyo.
+          span.arrow--down
+    section.vinos__list 
+      each vino in site.data.vinos
+        article.vinos__vino 
+          img.vinos__vino__img(src=vino.img)
+          .vinos__vino__data
+            h2.vinos__vino__name= vino.name
+            p.vinos__vino__desc= vino.desc
+            a.vinos__vino__link(href="#")
+              span._circle
+              span._cross
+
