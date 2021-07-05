@@ -1,30 +1,37 @@
 [
   {
     "text":"Nosotros",
-    "url":"/nosotros"
+    "url":"/nosotros",
+    "target":"_self"
   },
   {
     "text":"Fincas",
-    "url":"/fincas"
+    "url":"/fincas",
+    "target":"_self"
   },
   {
     "text":"Vinos",
-    "url":"/vinos"
+    "url":"/vinos",
+    "target":"_self"
   },
   {
     "text":"Enología y Agronomía",
-    "url":"/enologia-agronomia"
+    "url":"#",
+    "target":"_self"
   },
   {
     "text":"State Experience",
-    "url":"/state-experience"
+    "url":"https://casanaoki.com/",
+    "target":"_blank"
   },
   {
     "text":"Casarena en el mundo",
-    "url":"/casarena-mundo"
+    "url":"/casarena-mundo",
+    "target":"_self"
   },
   {
     "text":"Contacto",
-    "url":"/contacto"
+    "url":"/contacto",
+    "target":"_self"
   }
 ]

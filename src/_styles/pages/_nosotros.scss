@@ -9,7 +9,7 @@
       max-width: 1200px;
       bottom:0;
       display: grid;
-      grid-template-columns: 1fr minmax(280px, 680px) 1fr;
+      grid-template-columns: 1fr minmax(280px, 500px) 1fr;
       grid-template-rows: 1fr auto 1fr;
     }
 
@@ -22,13 +22,13 @@
 
     &__title {
       font-family: $titleFont;
-      font-size: 48px;
+      font-size: 36px;
       font-style: italic;
       font-weight: normal;
       margin: 0 0 20px;
 
       @include mq(md) {
-        font-size: 64px;
+        font-size: 56px;
       }
     }
 
@@ -61,9 +61,14 @@
       border-top: $gold solid 5px;
       height: 10rem;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
       justify-items: center;
+      padding-left: 15px;
+      padding-right: 15px;
+      
+      @include mq(md) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+      }
 
       &--container {
         max-width: 25rem;
@@ -83,6 +88,34 @@
   }
 
   &__explore {
+
+    .image-box {
+      &:after {
+        @include mq(xs) {
+          background: rgba(0,0,0,.4);
+          right:0;
+        }
+      }
+    }
+
+    &--bot {
+      position: relative;
+
+      &:before{
+        content: '';
+        height: 5px;
+        background: $mainColor;
+        width: 90%;
+        max-width: 1200px;
+        left: 0;
+        right:0;
+        margin: auto;
+        top:0;
+        z-index: 10;
+        display: block;
+        position: absolute;
+      }
+    }
 	
 		&__content {
       position: absolute;
@@ -93,7 +126,8 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 1fr auto 1fr;
-      padding: 0rem 4rem;
+      padding-left: 15px;
+      padding-right: 15px;
 		}
 
     &__text {
@@ -101,91 +135,137 @@
       grid-row: 2;
       color: $white;
       text-align: left;
+      max-width: 500px;
     }
 
 		&__title {
       font-family: $titleFont;
-      font-size: 48px;
-      font-style: italic;
+      font-size: 36px;
       font-weight: normal;
       margin: 0 0 20px;
 
       @include mq(md) {
-        font-size: 64px;
+        font-size: 56px;
       }
 		}
 
 		&__subtitle {
 			font-size: 18px;
-      line-height: 1.5;
+      line-height: 2;
       letter-spacing: 0.5px;
-      margin: 0 0 50px;
+      margin: 0 0 80px;
 
       @include mq(md) {
-        font-size: 24px;
+        font-size: 16px;
       }
 		}
 
 		.up {
 			margin: 0 0 20px;
+      font-weight: 400;
 		}
 
 		.down {
 			margin: 0 0 50px;
+      font-style: italic;
 		}
   }
 
   &__grid {
-    background-color: $white;
+    background-color: $beige;
+    position: relative;
+
+    &:before {
+      content: '';
+      height: 5px;
+      background: $mainColor;
+      width: 90%;
+      max-width: 1200px;
+      left: 0;
+      right:0;
+      margin: auto;
+      top:0;
+      z-index: 10;
+      display: block;
+      position: absolute;
+    }
       
     &-content {
-      max-width: 1200px;
-      padding: 3rem 0rem;
+      padding: 8% 0rem;
       display: grid;
       gap: 2rem;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 0.45fr 0.30fr 0.10fr 0.15fr;
       justify-items: center;
+      
+      @include mq(md) {        
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 0.45fr 0.30fr 0.10fr 0.15fr;
+      }
 
       &--el1 {
-        grid-column: 1;
-        grid-row: 1 / 2;
         align-self: center;
-        width: 80%;
+        width: 60%;
+        
+        @include mq(md) {
+          grid-column: 1;
+          grid-row: 1 / 2;
+        }
+        
         p {
-            color: $gold;
+            font-size: 16px;
+            line-height: 2;
+            color: $altGray;
+            margin: 0 0 10%;
         }
       }
       
       &--el2 {
         width: 100%;
         height: 100%;
-        grid-column: 1;
-        grid-row: 2 / 5;
+        
+        @include mq(md) {
+          grid-column: 1;
+          grid-row: 2 / 5;
+        }
       }
       
       &--el3 {
         width: 100%;
         height: 100%;
-        grid-column: 2;
-        grid-row: 1 / 3;
+        
+        @include mq(md) {
+          grid-column: 2;
+          grid-row: 1 / 3;
+        }
       }
       
       &--el4 {
         width: 100%;
         height: 100%;
-        grid-column: 2;
-        grid-row: 3;
+        justify-self: start;
+        
+        @include mq(md) {
+          width: 80%;
+          grid-column: 2;
+          grid-row: 3;
+        }
       }
 
       &--el5 {
-        grid-column: 2;
-        grid-row: 4;
-        align-self: center;
-        width: 80%;
+        justify-self: start;
+        align-self: end;
+        margin-left: 10%;
+        width: 70%;
+        
+        @include mq(md) {
+          grid-column: 2;
+          grid-row: 4;
+        }
 
         p {
-          color: $gold;
+          font-size: 16px;
+          line-height: 2;
+          color: $altGray;
+          margin: 10% 0 0;
         }
       }
     }

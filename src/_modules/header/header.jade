@@ -7,7 +7,7 @@ header.header
     ul.header__menu
       each link in site.data.header
         li 
-          a(href=link.url)= link.text
+          a(href=link.url, target=link.target)= link.text
   
   button.header__language EN
 
