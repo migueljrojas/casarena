@@ -10,7 +10,7 @@
       bottom:0;
       display: grid;
       grid-template-columns: 1fr minmax(280px, 680px) 1fr;
-      grid-template-rows: 1fr auto 1fr;
+      grid-template-rows: 1fr auto 1fr 1fr;
 		}
 
 		&__text {
@@ -22,35 +22,51 @@
 
     &__title {
       font-family: $titleFont;
-      font-size: 48px;
       font-style: italic;
       font-weight: normal;
       margin: 0 0 20px;
 
       @include mq(md) {
-        font-size: 64px;
+        font-size: 48px;
       }
     }
 
     &__subtitle {
-      font-size: 18px;
       line-height: 1.5;
       letter-spacing: 0.5px;
       margin: 0 0 50px;
 
       @include mq(md) {
-        font-size: 24px;
+        font-size: 18px;
       }
     }
+		
+		&__map {
+			margin-bottom: 3rem;
+			max-width: 90%;
+		}
 
     .arrow--down {
       grid-column: 2;
       grid-row: 3;
       justify-self: center;
+
+			@include mq(xs) {
+				height: 30px;
+				width: 15px;
+			}
     }
-		
-		img {
-			margin-bottom: 3rem;
+
+		.image-box {
+			&:after {
+				@include mq(xs) {
+					background: rgba(0,0,0,.4);
+					right:0;
+				}
+			}
+			@include mq(md) {
+        padding-bottom: 47%;
+      }
 		}
 
 	}
@@ -58,10 +74,13 @@
 
 	&__section {
 		background-color: $lightBeige;
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
 		align-items: center;
 		position: relative;
+
+		@include mq(md) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+		}
 
     &:before{
       content: '';
@@ -80,10 +99,14 @@
 
 
 		&__content {
-			padding: 2rem;
 			grid-column: 1;
 			max-width: 600px;
 			justify-self: end;
+			padding: 2rem;
+
+      @include mq(md) {
+        padding: 2rem 12rem 2rem 2rem;
+      }
 		}
 		
 		&__text {
@@ -96,26 +119,127 @@
       font-style: italic;
       font-weight: normal;
       margin: 0 0 20px;
-			font-size: 1.5rem;
+
+			@include mq(md) {
+        font-size: 1.5rem;
+      }
 		}
 
 		&__subtitle {
-			font-size: 16px;
 			line-height: 2;
 			color: $altGray;
+
+			@include mq(md) {
+        font-size: 16px;
+      }
 		}
 
 		&__letter {
-			font-size: 14px;
 			line-height: 2;
 			color: $altGray;
 			text-transform: uppercase;
+
+			@include mq(md) {
+        font-size: 14px;
+      }
 		}
 
-		img {
+		&__map {
 			grid-column: 2;
 			width: 100%;
 			height: 100%;
+			position: relative;
+
+			ul {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			}
+
+			li {
+				.mapa__link {
+					display: flex;
+      		align-items: center;
+      		justify-content: center;
+      		position: absolute;
+      		width: 40px;
+      		height: 40px;
+
+      		._circle {
+      		  border: 1px solid $white;
+      		  width: 100%;
+      		  height: 100%;
+      		  border-radius: 50%;
+      		  position: absolute;
+      		}
+				
+      		._cross {
+      		  &:before,
+      		  &:after {
+      		    content: '';
+      		    width: 16px;
+      		    height: 1px;
+      		    background: $white;
+      		    display: block;
+      		    position: relative;
+      		  }
+					
+      		  &:after {
+      		    transform: rotate(90deg);
+      		  }
+      		}
+				}
+
+				&:hover {
+					& > img {
+						display: block;
+					}
+				}
+
+				&[data-finca='jamilla'] {
+					.mapa__link {
+						left: 52%;
+						top: 25%;
+					}
+				}
+
+				&[data-finca='lauren'] {
+					.mapa__link {
+						left: 46%;
+						top: 78%;
+					}
+				}
+
+				&[data-finca='naoki'] {
+					.mapa__link {
+						left: 54%;
+						top: 74%;
+					}
+				}
+
+				&[data-finca='owen'] {
+					.mapa__link {
+						left: 30%;
+						top: 79%;
+					}
+				}
+
+				img {
+					max-width: 100%;
+					display: none;
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate3d(-50%, -50%, 0);
+				}
+			}
+
+			& > img {
+				width: 100%;
+				display: block;
+			}
 		}
 
 	}
@@ -126,11 +250,18 @@
 			position: absolute;
       z-index: 10;
       top:0;
-      max-width: 1200px;
+			left: 0;
+			right: 0;
       bottom:0;
-      display: grid;
-      grid-template-columns: 1fr minmax(280px, 680px) 1fr;
-      grid-template-rows: 1fr auto 1fr 1fr;
+			padding: 2rem 2rem 0rem 2rem;
+			margin: auto;
+			
+			@include mq(md) {
+				max-width: 1200px;
+				display: grid;
+				grid-template-columns: 1fr minmax(280px, 900px) 1fr;
+				grid-template-rows: 1fr auto 1fr 1fr;
+			}
 		}
 
 		&__text {
@@ -138,36 +269,74 @@
       grid-row: 2;
       color: $white;
       text-align: center;
+			max-width: 680px;
+			margin-bottom: 2rem;
+			justify-self: center;
+			
+			@include mq(md) {
+				margin-bottom: 7rem;
+			}
     }
 
     &__title {
       font-family: $titleFont;
-      font-size: 48px;
       font-weight: normal;
       margin: 0 0 20px;
+			
+			@include mq(md) {
+				font-size: 48px;	
+			}
     }
 
     &__subtitle {
-      font-size: 18px;
-      line-height: 1.5;
+			line-height: 1.5;
       letter-spacing: 0.5px;
-      margin: 0 0 50px;
+			
+			@include mq(md) {
+				font-size: 18px;
+			}
     }
 
 		.icons__container {
 			display: flex;
-			gap: 4rem;
+			gap: 2rem;
       grid-column: 2;
       grid-row: 3;
       justify-self: center;
+			flex-wrap: wrap;
+			justify-content: center;
+
+			@include mq(md) {
+				gap: 9rem;
+			}
     }
 
-		.icons__container p {
-			color: $gold;
-			text-transform: uppercase;
-			text-align: center;
+		.icons__box {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			p {
+				color: $gold;
+				text-transform: uppercase;
+				text-align: center;
+				line-height: 1.1rem;
+			}
+
+			img {
+				width: fit-content;
+			}
 		}
 
+		.image-box {
+			@include mq(xs) {
+				padding-bottom: 150%;
+			}
+		}
+
+		.image-box:after {
+			background: rgba(0, 0, 0, .38);
+		}
 	}
 	
 	&__images {
@@ -185,11 +354,18 @@
 		display: flex;
 		justify-content: center;
 
+		@include mq(xs) {
+			padding: 1rem;
+		}
+
 		&__content {
-			display: grid;
-			grid-template-columns: 1fr 2fr;
-			grid-template-rows: 4rem 1fr 4rem;
 			max-width: 1200px;
+			
+			@include mq(md) {
+				display: grid;
+				grid-template-columns: 1fr 2fr;
+				grid-template-rows: 4rem 1fr 4rem;
+			}
 		}
 
 		&__title {
@@ -199,25 +375,23 @@
 			grid-row: 2;
 			color: $gold;
 			text-align: center;
+
+			@include mq(xs) {
+				padding-right: 1rem;
+			}
 		}
 
 		&__subtitle {
 			grid-column: 2;
 			grid-row: 2;
-			padding-left: 2rem;
-			border-left: $gold 2px solid;
 			color: $altGray;
       line-height: 1.5;
       letter-spacing: 0.5px;
+			
+			@include mq(md) {
+				border-left: $gold 2px solid;
+				padding-left: 2rem;
+			}
 		}
-
-
-
 	}
-
-
-
-
-
-
 }

@@ -14,7 +14,7 @@ block content
           .fincas__hero__text 
             h1.fincas__hero__title Nuestras Fincas
             p.fincas__hero__subtitle Luján de Cuyo
-            img(src="/", alt="motañas")
+            img.fincas__hero__map(src="/images/fincas/mapa-hero.png", alt="motañas")
           span.arrow--down
 
     section.fincas__section
@@ -23,7 +23,31 @@ block content
           p.fincas__section__letter Nuestras Fincas
           h2.fincas__section__title Un homenaje a la diversidad de una zona, en alturas, en tamaños, en insolaciones, y sobre todo en sus suelos.
           p.fincas__section__subtitle Con cada finca profundizamos la construcción de la identidad de Casarena y de Lujan de Cuyo. Con la mirada en aquello que marcó a la gente que transita por sus surcos, comprendiendo, seleccionando, cuidando cada detalle.
-      img(src='/images/fincas/mapa.jpg', alt="mapa")
+      .fincas__section__map
+        img(src='/images/fincas/mapa.jpg', alt="mapa")
+        ul 
+          li(data-finca="jamilla")
+            .mapa__link
+              span._circle
+              span._cross
+            img(src="/images/fincas/hover-jamilla.png", alt="jamilla")
+          li(data-finca="lauren")
+            .mapa__link
+              span._circle
+              span._cross
+            img(src="/images/fincas/hover-lauren.png", alt="lauren")
+          li(data-finca="naoki")
+            .mapa__link
+              span._circle
+              span._cross
+            img(src="/images/fincas/hover-naoki.png", alt="naoki")
+          li(data-finca="owen")
+            .mapa__link
+              span._circle
+              span._cross
+            img(src="/images/fincas/hover-owen.png", alt="owen")
+            
+        
 
     section.fincas__explore
       +imageBox('/images/fincas/jamilla.jpg', 'full', 'small')
@@ -33,17 +57,17 @@ block content
             p.fincas__explore__subtitle Finca Jamilla rodea la bodega construida hace casi cien años. Es el fruto del esfuerzo y los sueños de una familia mendocina que elaboró sus vinos siguiendo la tradición europea, con gran empeño y dedicación. Finca familia está sobre la mítica calle Brandsen y tiene un entorno de enorme belleza.
           .icons__container
             .icons__box 
-              i 
-              p perdriel, luján de cuyo, mendoza
+              img(src="/images/fincas/icon-marker.png", alt="marker") 
+              p perdriel,<br>luján de cuyo,<br>mendoza
             .icons__box 
-              i 
-              p altitud 940 msnm
+              img(src="/images/fincas/icon-mountain.png", alt="mountain") 
+              p altitud<br>940 msnm
             .icons__box 
-              i 
-              p año de plantación 1995
+              img(src="/images/fincas/icon-rainbow.png", alt="rainbow") 
+              p año de<br>plantación 1995
             .icons__box 
-              i 
-              p lecho de río. canto rodado
+              img(src="/images/fincas/icon-river.png", alt="river") 
+              p lecho de río.<br>canto rodado
 
     section.fincas__images 
       img(src='/images/fincas/uvas.jpg', alt="uvas")
@@ -62,17 +86,17 @@ block content
             p.fincas__explore__subtitle Finca Naoki, enclavada en una zona prejuzgada como imposible para viñedos por la escasez de agua y la presencia de suelo calcáreo. De la vocación por el trabajo y la poética de los desafíos, transformamos sus terrazas en una finca modelo. Finca Naoki, a la vera de la famosa Ruta 40, mira tranquila hacia la cordillera de Los Andes.
           .icons__container
             .icons__box 
-              i 
-              p agrelo, luján de cuyo, mendoza
+              img(src="/images/fincas/icon-marker.png", alt="marker")
+              p agrelo,<br>luján de cuyo,<br>mendoza
             .icons__box 
-              i 
-              p altitud 950 msnm
+              img(src="/images/fincas/icon-mountain.png", alt="mountain") 
+              p altitud<br>950 msnm
             .icons__box 
-              i 
-              p año de plantación 2010
+              img(src="/images/fincas/icon-rainbow.png", alt="rainbow")  
+              p año de<br>plantación 2010
             .icons__box 
-              i 
-              p cementaciones de yeso
+              img(src="/images/fincas/icon-river.png", alt="river") 
+              p cementaciones<br>de yeso
 
     section.fincas__images 
       img(src='/images/fincas/uvas2.jpg', alt="uvas2")
@@ -91,17 +115,17 @@ block content
             p.fincas__explore__subtitle Finca Lauren está enclavada en la zona más fría de Agrelo. Allí la variación de temperatura entre la noche y el día es marcada, lo cual permite que la vid tenga un descanso nocturno durante la adaptación de diferentes varietales que expresan en nuestros vinos el terroir de manera sobresaliente.
           .icons__container
             .icons__box 
-              i 
-              p agrelo, luján de cuyo, mendoza
+              img(src="/images/fincas/icon-marker.png", alt="marker")
+              p agrelo,<br>luján de cuyo,<br>mendoza
             .icons__box 
-              i 
-              p altitud 918 msnm
+              img(src="/images/fincas/icon-mountain.png", alt="mountain")  
+              p altitud<br>918 msnm
             .icons__box 
-              i 
-              p año de plantación 2006
+              img(src="/images/fincas/icon-rainbow.png", alt="rainbow") 
+              p año de<br>plantación 2006
             .icons__box 
-              i 
-              p profundo y arcilloso
+              img(src="/images/fincas/icon-river.png", alt="river")  
+              p profundo y<br>arcilloso
 
     section.fincas__images 
       img(src='/images/fincas/pajaro.jpg', alt="pajaro")
@@ -120,17 +144,17 @@ block content
             p.fincas__explore__subtitle Finca Owen es llamada entre nuestra gente "la sobreviviente". Parrales del año 1930 se erigen como esculturas clásicas entre sus callejones. Llama la atención la variedad de suelos que cambian cada pocos metros, lo que permite un gran trabajo de micro-terroir. Finca Owen es el activo genético y emocional de nuestro proyecto de Luján de Cuyo.
           .icons__container
             .icons__box 
-              i 
-              p agrelo, luján de cuyo, mendoza
+              img(src="/images/fincas/icon-marker.png", alt="marker")
+              p agrelo,<br>luján de cuyo,<br>mendoza
             .icons__box 
-              i 
-              p altitud 960 msnm
+              img(src="/images/fincas/icon-mountain.png", alt="mountain")   
+              p altitud<br>960 msnm
             .icons__box 
-              i 
-              p año de plantación 1930
+              img(src="/images/fincas/icon-rainbow.png", alt="rainbow") 
+              p año de<br>plantación 1930
             .icons__box 
-              i 
-              p micro terroir, arena y arcilla
+              img(src="/images/fincas/icon-river.png", alt="river") 
+              p micro terroir,<br>arena y arcilla
 
     section.fincas__images 
       img(src='/images/fincas/uvas3.jpg', alt="uvas3")
