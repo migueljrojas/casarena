@@ -6,7 +6,7 @@
       position: absolute;
       z-index: 10;
       top:0;
-      width:100%;
+      max-width: 1200px;
       bottom:0;
       display: grid;
       grid-template-columns: 1fr minmax(280px, 500px) 1fr;
@@ -121,17 +121,17 @@
       position: absolute;
       z-index: 10;
       top:0;
-      width:100%;
+      max-width: 1200px;
       bottom:0;
       display: grid;
-      grid-template-columns: 1fr minmax(280px, 1200px) 1fr;
+      grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 1fr auto 1fr;
       padding-left: 15px;
       padding-right: 15px;
 		}
 
     &__text {
-      grid-column: 2;
+      grid-column: 1;
       grid-row: 2;
       color: $white;
       text-align: left;
