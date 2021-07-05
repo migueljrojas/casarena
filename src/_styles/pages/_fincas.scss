@@ -59,13 +59,31 @@
 	&__section {
 		background-color: $lightBeige;
 		display: grid;
-		gap: 2rem;
 		grid-template-columns: repeat(2, 1fr);
 		align-items: center;
+		position: relative;
+
+    &:before{
+      content: '';
+      height: 5px;
+      background: $mainColor;
+      width: 90%;
+      max-width: 1200px;
+      left: 0;
+      right:0;
+      margin: auto;
+      top:0;
+      z-index: 10;
+      display: block;
+      position: absolute;
+    }
+
 
 		&__content {
 			padding: 2rem;
 			grid-column: 1;
+			max-width: 600px;
+			justify-self: end;
 		}
 		
 		&__text {
@@ -79,20 +97,12 @@
       font-weight: normal;
       margin: 0 0 20px;
 			font-size: 1.5rem;
-
-      @include mq(md) {
-        font-size: 36px;
-      }
 		}
 
 		&__subtitle {
 			font-size: 16px;
 			line-height: 2;
 			color: $altGray;
-
-      @include mq(md) {
-        font-size: 24px;
-      }
 		}
 
 		&__letter {
@@ -100,9 +110,6 @@
 			line-height: 2;
 			color: $altGray;
 			text-transform: uppercase;
-			@include mq(md) {
-        font-size: 24px;
-      }
 		}
 
 		img {
@@ -138,10 +145,6 @@
       font-size: 48px;
       font-weight: normal;
       margin: 0 0 20px;
-
-      @include mq(md) {
-        font-size: 64px;
-      }
     }
 
     &__subtitle {
@@ -149,10 +152,6 @@
       line-height: 1.5;
       letter-spacing: 0.5px;
       margin: 0 0 50px;
-
-      @include mq(md) {
-        font-size: 24px;
-      }
     }
 
 		.icons__container {
@@ -200,11 +199,6 @@
 			grid-row: 2;
 			color: $gold;
 			text-align: center;
-
-			@include mq(md) {
-        font-size: 36px;
-      }
-			
 		}
 
 		&__subtitle {
@@ -215,10 +209,6 @@
 			color: $altGray;
       line-height: 1.5;
       letter-spacing: 0.5px;
-
-      @include mq(md) {
-        font-size: 24px;
-      }
 		}
 
 
