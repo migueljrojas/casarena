@@ -3,6 +3,16 @@ extends ../_layouts/base
 block config
   - var baseUrl = '../';
 
+include ../_modules/image-box/imageBox
+include ../_modules/button/button
+
 block content
   main.fincas
-    h1 nuestras fincas
+    section.fincas__hero
+      +imageBox('http://lorempixel.com/1920/1080/city/1')
+        .fincas__hero__content
+          .fincas__hero__text 
+            h1.fincas__hero__title Nuestras Fincas
+            p.fincas__hero__subtitle Luján de Cuyo
+            img(src="/", alt="motañas")
+          span.arrow--down
